@@ -2,7 +2,4 @@
 # 1. Propósito del Proyecto
 Este proyecto tiene como objetivo transformar un conjunto de archivos heredados (con problemas de desorganización, duplicidad y falta de datos) en un entorno de trabajo limpio, reproducible, trazable y debidamente documentado sobre ensayos de resistencia a compresión en hormigón.
 # 2. Estructura del Repositorio
-El proyecto sigue una estructura clara separando entradas, procesos y salidas:
-```text
-Trabajo_U1_jeremmycontreras/
-
+El proyecto sigue una estructura donde en la carpeta "dato/originales" se ubican todos los archivos originales sin modificación. La nueva estructura reagrupa estos archivos con el fin de simplificar la lectura del presente proyecto heredado en las carpetas "datos/procesados" donde se encuentra una planilla de Excel corregido que cuenta con las unidades físicas que inicialmente no se especificaban. En la carpeta de "documentacion" se encuentra un archivo con la declaración legitima de que se utilizo la ayuda de agentes de IA durante la creación. En la carpeta de "procesos" se encuentran algunos comentarios o notas realizadas a lo largo de la corrección del proyecto. Finalmente en la carpeta de "resultados" se mantienen las planillas de Excel del proyecto heredado.         
