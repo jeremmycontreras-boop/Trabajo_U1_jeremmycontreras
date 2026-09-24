@@ -1,0 +1,39 @@
+1. Revisión de documentos originales
+
+	Se inspeccionaron los dos archivos de excel provenientes del proyecto heredado.
+	- "ensayo_hormigon.xlsx": Presenta columnas de tiempo, carga y desplazamiento sin unidades explicadas.
+	                          Contenia notas extrañas sobre las dimensiones.
+
+	- "ensayo_hormigon_FINAL_v2.xlsx": Presenta columnas "P", "u" y "sigma", con fórmulas de cálculo sin 
+	                                   documentación y la etiqueta "fmax = 25.46479".
+	                                   Existen notas informales ('archivo bueno?', 'usar este').
+
+2. Revisión de cálculos y fórmulas
+
+	Se reviso la fórmula que se ubica en la columna de tensión (=A2*1000/17671.46) para entender de dónde 
+	aparecen los números.
+	
+	- Diámetro y Área: La probeta mide 150 mm de diámetro (visto en la nota del primer Excel). 
+	                   Al calcular el área del círculo (pi * 150^2 / 4) calza justo 17671.46 mm^2. 
+    			   Ese es el número que esta ingresado en la fórmula.
+
+	- Conversión de Carga: La carga P viene en kN. El *1000 es para convertirla en Newtons (N).
+
+	- Resultado de la Tensión: Al dividir N por mm^2 nos da la tensión en MPa (1 N/mm^2 = 1 MPa).
+
+	- Resistencia Máxima: Con la carga más alta (450 kN), la resistencia máxima arroja 25,46 MPa.
+
+3. Organización de datos
+
+	1. Se dejan los dos Excel originales intactos dentro de 'datos/originales/' para no perder 
+           nada de la versión inicial.
+ 	
+	2. En 'datos/procesados/' se creo un único archivo limpio llamado 'ensayo_hormigon_corregido.xlsx'.
+  	
+	3. Se corrigieron las cabeceras en la tabla poniendo los nombres claros con sus 
+           unidades de medida entre paréntesis: Carga P [kN], Deformación u [mm] y 
+           Tensión sigma [MPa].
+  
+	4. Se registro al lado las medidas de la probeta (diámetro, altura y área) 
+           para que cualquier usuario que vea la planilla sepa de dónde aparecen los números.
+
